@@ -1,0 +1,72 @@
+body {
+    background-image: url('images/white-bg.gif');
+    background-repeat:repeat;
+}
+
+.sidebar {
+    padding: 20px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculation */
+    top: 0; /* Align to the top of the viewport */
+    right: 0; /* Align to the right side of the viewport */
+    text-align: center;
+}
+
+h2,h4{
+    font-family: "Racing Sans One";
+    color: #495867;
+}
+
+h5{
+    color: #495867;
+}
+
+footer {
+    margin: 100px;
+}
+
+.content {   
+    padding-left: 5%;
+    padding-right: 5%; 
+}
+
+a.image img {
+    border: 2px solid black;
+}
+
+.sidebar-img {
+    position: fixed;
+    top: 25%;
+    z-index: 1; /* Ensure the image stays above other content */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.scrolling-image {
+    position:fixed;
+    width: 200px; /* Adjust image size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease; /* Smooth transition for transform changes */
+}
+
+/* Media query for desktop */
+@media only screen and (min-width: 768px) {
+    
+    .sidebar {
+        width: 30%; /* 25% width on desktop */
+        height: 100vh; /* Full height on desktop */
+        overflow-y: auto; /* Enable vertical scrolling if needed */
+        position: fixed; /* Fixed positioning */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+    }
+    
+    .content {
+        margin-top: 100px;
+        padding-right: 5%;
+        padding-left: 10%;
+        width: 70%; /* Remaining width for content */
+
+    }
+}
