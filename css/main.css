@@ -36,18 +36,14 @@ a.image img {
 }
 
 .sidebar-img {
-    position: fixed;
-    top: 25%;
-    z-index: 1; /* Ensure the image stays above other content */
-    display: flex;
-    justify-content: center; /* Center horizontally */
+    display:none;
 }
 
-.scrolling-image {
-    position:fixed;
-    width: 200px; /* Adjust image size as needed */
-    height: auto; /* Maintain aspect ratio */
-    transition: transform 0.5s ease; /* Smooth transition for transform changes */
+.icons li{
+    margin-top: 250px;
+    align-items: center;
+    display: flex;
+    
 }
 
 /* Media query for desktop */
@@ -60,6 +56,21 @@ a.image img {
         position: fixed; /* Fixed positioning */
         display: flex;
         justify-content: center; /* Center horizontally */
+    }
+
+    .sidebar-img {
+        position: fixed;
+        top: 20%;
+        z-index: 1; /* Ensure the image stays above other content */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+    }
+    
+    .scrolling-image {
+        position:fixed;
+        width: 200px; /* Adjust image size as needed */
+        height: auto; /* Maintain aspect ratio */
+        transition: transform 0.5s ease; /* Smooth transition for transform changes */
     }
     
     .content {

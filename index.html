@@ -28,10 +28,31 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon-16.png">
+  <link rel="icon" type="image/png" href="images/smile-icon.png">
+
+  <script>
+    // Function to show content based on navigation click
+    function showContent(type) {
+        // Hide all content first
+        document.getElementById('personalContent').style.display = 'none';
+        document.getElementById('professionalContent').style.display = 'none';
+
+        // Show the selected content
+        document.getElementById(type + 'Content').style.display = 'block';
+
+        // Remove 'active' class from all buttons
+        var buttons = document.getElementsByClassName('nav-btn');
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove('active');
+        }
+
+        // Add 'active' class to the clicked button
+        event.target.classList.add('active');
+    }
+</script>
 
 </head>
-<body style="background-image: url('images/smudge-pale-blue.gif'); background-repeat: repeat;"></body>
+<body style="background-image: url('images/smudge-pale-green.gif'); background-repeat: repeat;"></body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -39,17 +60,35 @@
     <h2>Matt Mangione</h2>
     <div class="sidebar-img">
       <img src="images/square.JPG" class="scrolling-image" id="scrollingImage">
+      <ul class="icons">
+          <li> <a href="Matthew J. Mangione, resume.pdf"><h4>RESUME</h4></a></li>
+        <li><a href="https://github.com/mjmangione" target="_blank">
+          <img src="images/github.png"></a></li>
+        <li><a href="mailto:mjmangione1@gmail.com">
+          <img src="images/mail-icon.png"></a></li>
+      </ul>
     </div>
+    <ul class="icons">
+
+      <li><a href="https://github.com/mjmangione" target="_blank">
+        <i src="images/github.png"></i></a></li>
+      <li><a href="mailto:mjmangione1@gmail.com">
+        <i src="images/mail-icon.png"></i></a></li>
+    </ul>
   </aside>
 
-   
+
+
   
   <div class="content">
       
       <div class="block">
         <h4>About Me</h4>
         <p>
-          I am 25 years old, currently living in Brooklyn. Recently I have been traveling in South America (Chile, Brazil and Argentina), improving my Spanish, writing, and exploring this part of the world. More than anything, I love to learn. Beyond my interest in math and technology, I am passionate about aquaculture, economics, literature, film, and contemporary art. In my free time, I enjoy writing, connecting with nature, and gardening.
+          I am 25 years old, currently living in Brooklyn. Recently I have been traveling in South America (Chile, Brazil and Argentina), improving my Spanish, writing, and exploring. More than anything, I love to learn. Beyond my interest in math and technology, I am passionate about aquaculture, economics, literature, film, and contemporary art. In my free time, I enjoy writing, connecting with nature, and gardening.
+
+          <br><br>
+          I bring an interdisciplinary approach to development which spans across my interests in technology, economics, philosophy and design. Utilizing this background, I have a perspective which allows me to solve problems creatively and purposefully. 
         </p>
       </div>
       <div class="block">
@@ -61,17 +100,15 @@
       <div class="block">
         <h5>Education</h5>
         <p>
-          I am a graduate of the University of Washington with a Bachelor of Sciences in <a href="https://acms.washington.edu/">Applied and Computational Mathematical Sciences</a>. This degree encompasses my interests in applied and theoretical computer science, data analysis, and pure and applied mathematics. I also minored in Art History, which has furthered my interest in the humanities and their relation to technology.
+          I am a graduate of the University of Washington with a Bachelor of Sciences in <a href="https://acms.washington.edu/">Applied and Computational Mathematical Sciences</a>. This degree encompasses my interests in applied and theoretical computer science, data analysis, and pure and applied mathematics. I also minored in Art History, which has furthered many of my personal interests.
         </p>
       </div>
       <div class="block">
         <h5>Mission</h5>
         <p>
-          As a technologist with an invested interest in the world, it is impossible to deny the transformative power of technology in our society. It is a powerful tool capable of creating and destroying traditions, ways of thinking, and the very frameworks for which humans interact with each other.
+          It is impossible to deny the transformative power of technology in our society. It is a tool capable of creating and destroying traditions, ways of thinking, and the very frameworks with which humans interact. It is imperative to design technology purposefully and thoughtfully, in order to aid the future we wish to create.
           <br><br>
-          I am passionate about technology in the sense that I believe in its capability for positive creation, its necessity for building a better future. With this comes the utmost responsibility in deciding how and when to deploy this power.
-          <br><br>
-          I bring an interdisciplinary approach to development which spans across my interests in technology, economics, philosophy and design. Utilizing this background, I have a perspective which allows to solve problems creatively and purposefully. It is my goal to develop systems which can have a concrete impact in the material world, which benefit the human interest in our interaction with the technological.
+          I am passionate about technology in the sense that I believe in its capacity for positive creation and its necessity for building a better future. It is my goal to develop systems which can have a concrete impact in the material world, which benefit the human interest in our interaction with the technological.
         </p>
       </div>
       <hr>
@@ -82,61 +119,116 @@
         <h4>Technical Focus</h4>
         <p>Technical skills I've developed through my education, personal interests, and prior work experience.</p>
         <ul class="feature-icons">
-          <li class="icon solid fa-code"><b>Data Analysis / Scientific Computing</b> <br>MATLAB, Python, SQL</li>
-          <li class="icon solid fa-cubes"><b>Software Development</b><br>Java, C / C++, Development tools</li>
+          <li class="icon solid fa-code"><b>Data Analysis</b> <br>Python, SQL, APIs</li>
+          <li class="icon solid fa-cubes"><b>Software Development</b><br>Java, ETLs, Linux, Testing</li>
           <li class="icon solid fa-book"><b>Discrete Math</b><br>Graph Theory, Linear Algebra, Optimization</li>
           <!-- <li class="icon solid fa-coffee">Drink much coffee</li>
           <li class="icon solid fa-bolt">Lightning bolt</li> -->
-          <li class="icon solid fa-users"><b>Technical Communication</b><br>Able to translate abstract ideas into English </li>
+          <li class="icon solid fa-users"><b>Technical Communication</b><br>The ability to translate abstract ideas into English </li>
         </ul>
         <hr>
     </div>
 
 
-    <section id = "triggerSection">
-      <div class="block">
-        <h4>A Few Projects</h4>
-        <p> Below lies some coursework which emphasizes some of my interests and skills. Click for more information.</p>
-        <div class="features">
-          <article>
-            <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2" class="image"><img src="images/gnr2bar.png" alt="" /></a>
-            <div class="inner">
-              <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2"><h5>Rock & Roll and the Gabor Transform</h5></a>
-              <p>Analysis of popular Rock songs using the Gabor Transform, a time-specific sweep of the Fast Fourier Transform algorithm which locates the individual frequencies of the song in time.</p>
-            </div>
-          </article>
-          <hr>
+  <section id = "triggerSection">
 
-          <article>
-            <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW4" class="image"><img src="images/vcols.png" alt="" /></a>
-            <div class="inner">
-              <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW4"><h5>Classifying MNIST digits using Linear Discriminant Analysis</h5></a>
-              <p>This project classifies the 10 digits of the MNIST dataset by finding the optimal basis which distinguishes each category. This is achieved using the singular value decomposition of the dataset.</p>
-            </div>
-          </article>
-          <hr>
-          <article>
-            <a href="https://github.com/mjmangione/CSE-455-COMPUTER-VISION-FINAL" class="image"><img src="images/birdclass.png" alt="" /></a>
-            <div class="inner">
-              <a href="https://github.com/mjmangione/CSE-455-COMPUTER-VISION-FINAL"><h5> Bird Classification using Transfer Learning</h5></a>
-              <p>With the goal of classifying 555 different species of birds using machine learning, this project imports large pre-trained convolutional neural network architectures, and then further trains them using our specific bird image dataset. </p>
-            </div>
-          </article>
-          <hr>
+    <h4>A Few Projects</h4>
 
-          <article>
-            <a href="https://github.com/mjmangione/AMATH-481-FINAL" class="image"><img src="images/sineBEC.jpg" alt="" /></a>
-            <div class="inner">
-              <a href="https://github.com/mjmangione/AMATH-481-FINAL"><h5>Bose-Einstein Condensate 3D Simulation</h5></a>
-              <p> In order to simulate the Bose-Einstein Condensate, an iterative numerical algorithm is used to approximate the Gross-Pitaevskii partial differenatil equation, a derivative of the Schrödinger equation.</p>
-            </div>
-          </article>
+    <div class="nav">
+      <button class="nav-btn" onclick="showContent('professional')">University</button>
+      <button class="nav-btn" onclick="showContent('personal')">Personal</button>
+    </div>
+
+    <div id="professionalContent" class="results">
+        <!-- Professional content goes here -->
+        <div class="block">
+          
+          <p> Below lies some coursework which emphasizes some of my interests and skills. Click for more information.</p>
+          <div class="features">
+            <article>
+              <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2" class="image"><img src="images/gnr2bar.png" alt="" /></a>
+              <div class="inner">
+                <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2"><h5>Rock & Roll and the Gabor Transform</h5></a>
+                <p>Analysis of popular Rock songs using the Gabor Transform, a time-specific sweep of the Fast Fourier Transform algorithm which locates the individual frequencies of the song in time.</p>
+              </div>
+            </article>
+            <hr>
+
+            <article>
+              <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW4" class="image"><img src="images/vcols.png" alt="" /></a>
+              <div class="inner">
+                <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW4"><h5>Classifying MNIST digits using Linear Discriminant Analysis</h5></a>
+                <p>This project classifies the 10 digits of the MNIST dataset by finding the optimal basis which distinguishes each category. This is achieved using the singular value decomposition of the dataset.</p>
+              </div>
+            </article>
+            <hr>
+            <article>
+              <a href="https://github.com/mjmangione/CSE-455-COMPUTER-VISION-FINAL" class="image"><img src="images/birdclass.png" alt="" /></a>
+              <div class="inner">
+                <a href="https://github.com/mjmangione/CSE-455-COMPUTER-VISION-FINAL"><h5> Bird Classification using Transfer Learning</h5></a>
+                <p>With the goal of classifying 555 different species of birds using machine learning, this project imports large pre-trained convolutional neural network architectures, and then further trains them using our specific bird image dataset. </p>
+              </div>
+            </article>
+            <hr>
+
+            <article>
+              <a href="https://github.com/mjmangione/AMATH-481-FINAL" class="image"><img src="images/sineBEC.jpg" alt="" /></a>
+              <div class="inner">
+                <a href="https://github.com/mjmangione/AMATH-481-FINAL"><h5>Bose-Einstein Condensate 3D Simulation</h5></a>
+                <p> In order to simulate the Bose-Einstein Condensate, an iterative numerical algorithm is used to approximate the Gross-Pitaevskii partial differenatil equation, a derivative of the Schrödinger equation.</p>
+              </div>
+            </article>
+          </div>
         </div>
+    </div>
+    
+    <div id="personalContent" class="results" style="display:none;">
+        <!-- personal content goes here -->
+        <p> Below are some personal projects that I have worked on, that reflect technical skills and my personal interests.</p>
+          <div class="features">
+            <article>
+              <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2" class="image"><img src="images/grafana.png" alt="" /></a>
+              <div class="inner">
+                <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2"><h5>Dedicated Web Server / Monitoring Agent</h5></a>
+                <p> I operate a cloud server to run a handful of web tools and scripts. It is comprised of a Nginx web server to host a private web page, a twitter bot, a kindle book club, as well as several other tests. Additionally, I deployed Prometheus and Grafana in order to monitor the health of the cloud server and the Nginx web server. </p>
+              </div>
+            </article>
+            <hr>
+
+            <article>
+              <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2" class="image"><img src="images/arduino.jpg" alt="" /></a>
+              <div class="inner">
+                <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2"><h5>Garduino</h5></a>
+                <p> I used Arduino to build a machine to care for my plants while I was away. It controls 3 water pumps on separate timers, and has a LED User Interface based on three buttons that can turn on the pumps and alter the timers.</p>
+              </div>
+            </article>
+            <hr>
+
+            <article>
+              <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2" class="image"><img src="images/hydroponics.jpg" alt="" /></a>
+              <div class="inner">
+                <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2"><h5>Hydroponic Garden</h5></a>
+                <p> I created an automated hydroponic system for sustaining plant life indoors. It uses a water pump, an aerator, food-safe PVC piping and automated overhead lighting. It was designed to grow as much food possible in the least amount of floor space, supporting plants from seedlings to maturity. It is best suited for dense plants like lettuce, bok choy, and strawberries.</p>
+              </div>
+            </article>
+            <hr>
+
+            <article>
+              <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2" class="image"><img src="images/webdev.png" alt="" /></a>
+              <div class="inner">
+                <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2"><h5>This Portfolio</h5></a>
+                <p>I made this website from scratch. It's not much, but I designed it myself, implemented it via HTML/CSS and Javascript, and host it for free via Github.</p>
+              </div>
+            </article>
+            <hr>
+            
       </div>
+
+      
   </section>
 
 
-  <script src="script.js"></script>
+  <!---<script src="script.js"></script> -->
 
   </div>
 
