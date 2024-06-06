@@ -39,8 +39,11 @@ a.image img {
     display:none;
 }
 
+.icons {
+        margin-top: 250px;
+}
+
 .icons li{
-    margin-top: 250px;
     align-items: center;
     display: flex;
     
@@ -60,7 +63,7 @@ a.image img {
 
     .sidebar-img {
         position: fixed;
-        top: 20%;
+        top: 15%;
         z-index: 1; /* Ensure the image stays above other content */
         display: flex;
         justify-content: center; /* Center horizontally */
