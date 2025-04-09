@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/white-bg.gif');
+    background-image: url('images/graywave.jpg');
     background-repeat:repeat;
 }
 
@@ -14,7 +14,7 @@ body {
     text-align: center;
 }
 
-h2,h4{
+h2,h3,h4{
     font-family: "Racing Sans One";
     color: #495867;
 }
@@ -37,14 +37,19 @@ a.image img {
 }
 
 .sidebar-img {
-    display:none;
+    top: 100px;
+    display: inline;
+    height: 200px;
+}
+
+.scrolling-image {
+    height: 200px; /* Adjust image size as needed */
+    width: auto; /* Maintain aspect ratio */
 }
 
 .icons li{
-    margin-top: 260px;
     align-items: center;
     display: flex;
-    
 }
 
 /* Media query for desktop */
@@ -62,7 +67,7 @@ a.image img {
 
     .sidebar-img {
         position: fixed;
-        margin-top: 100px;
+        margin-top: 50px;
         display: flex;
         justify-content: center; /* Center horizontally */
     }
@@ -80,5 +85,10 @@ a.image img {
         padding-left: 10%;
         width: 70%; /* Remaining width for content */
 
+    }
+
+    .icons li{
+        margin-top: 260px;
+        
     }
 }

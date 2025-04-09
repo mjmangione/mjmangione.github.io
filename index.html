@@ -15,8 +15,10 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+  <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   
   <link rel="stylesheet" href="css/main_legacy.css">
@@ -52,14 +54,15 @@
 </script>
 
 </head>
-<body style="background-image: url('images/smudge-pale-green.gif'); background-repeat: repeat;"></body>
+<body style="background-image: url('images/smudge-pale-blue.gif'); background-repeat: repeat;"></body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <aside class="sidebar">
-    <h2>Matt Mangione</h2>
+    <h3>Matt Mangione</h3>
     <div class="sidebar-img">
-      <img src="images/square.JPG" class="scrolling-image" id="scrollingImage">
+      <img src="images/square.JPG" class="scrolling-image" id="scrollingImage"> 
+      <br>
       <ul class="icons">
           <li> <a href="Matthew J. Mangione, resume.pdf"><h4>RESUME</h4></a></li>
         <li><a href="https://github.com/mjmangione" target="_blank">
@@ -85,7 +88,7 @@
       <div class="block">
         <h4>About Me</h4>
         <p>
-          Based in Norway, I’m a data scientist with a strong foundation in technology and analytics. Over the past year, I’ve traveled extensively across South America, contributing to aquaculture projects while improving my Spanish. I’m now preparing to make Oslo my home, to be with my partner and pursue new career opportunities. My passion for learning drives everything I do, and I’m as curious about math and technology as I am about aquaculture, economics, and the arts. Outside of work, I enjoy writing, exploring the outdoors, and gardening when I can.
+          Based in Oslo, I’m a data scientist with a strong foundation in technology and analytics. Over the past year, I’ve been working with Marimetrics, an Oslo-based startup developing high-precision chemical sensors for aquatic environments—where I’ve focused on data engineering, machine learning, and cloud infrastructure. Before that, I spent time traveling in South America, contributing to aquaculture projects and improving my Spanish. My passion for learning drives everything I do, and I’m as curious about math and technology as I am about aquaculture, economics, and the arts. Outside of work, I enjoy writing, exploring the outdoors, and gardening when I can.
           <br><br>
           I bring an interdisciplinary approach to development which spans across my interests in technology, economics, philosophy and design. Utilizing this background, I have a perspective which allows me to solve problems creatively and purposefully. 
         </p>
@@ -93,7 +96,11 @@
       <div class="block">
         <h5>Experience</h5>
         <p>
-          I spent the last two years working as a Performance Engineer at Moviri. This was a customer facing role, which aided clients in implementing technologies and processes for the optimization of IT systems. This was accomplished through designing data architectures and ETLs to monitor performance. Across several large companies, we brought performance observability across their (often enormous) digital infrastructures, resulting in a vast reduction of cloud and overhead spending.
+          I’ve been working with Marimetrics, a startup which develops high-precision multi-chemical sensors for use in aquatic environments. My role has focused on building the data infrastructure that supports this system, from designing and maintaining pipelines for ingesting and storing sensor data, to developing tools for anomaly and event detection. I’ve also contributed to internal automation, and project development efforts. This work has helped lay the foundation for a scalable data platform, making sensor measurements more interpretable and effective for detecting pollution events and other phenomena.
+        </p>
+
+        <p>
+          I spent the prior two years working as a Performance Engineer at Moviri. This was a customer facing role, which aided clients in implementing technologies and processes for the optimization of IT systems. This was accomplished through designing data architectures and ETLs to monitor performance. Across several large companies, we brought performance observability across their (often enormous) digital infrastructures, resulting in a vast reduction of cloud and overhead spending.
         </p>
       </div>
       <div class="block">
@@ -134,17 +141,25 @@
     <h4>A Few Projects</h4>
 
     <div class="nav">
+      <button class="nav-btn" onclick="showContent('professional')">Professional</button>
       <button class="nav-btn" onclick="showContent('personal')">Personal</button>
-      <button class="nav-btn" onclick="showContent('professional')">University</button>
-
     </div>
 
-    <div id="professionalContent" class="results" style="display:none;">
+    <div id="professionalContent" class="results">
         <!-- Professional content goes here -->
         <div class="block">
           
           <p> Below lies some coursework which emphasizes some of my interests and skills. Click for more information.</p>
           <div class="features">
+            <article>
+              <a href="https://github.com/mjmangione" class="image"><img src="images/anomaly_detection.png" alt="" /></a>
+              <div class="inner">
+                <h5>Anomaly Detection using Autoencoding Machine Learning Models</h5>
+                <p>I created a machine learning framework to detect anomalies in multivariate timeseries data using an LSTM autoencoder. It takes sensor measurements, normalizes and transforms them into time windows for training the model. The model learns to reconstruct normal patterns, and the reconstruction error is used to flag unusual behavior. The system runs on AWS Lambda, and is integrated into the main application for real-time monitoring.</p>
+              </div>
+            </article>
+            <hr>
+            
             <article>
               <a href="https://github.com/mjmangione/AMATH-482/tree/master/HW2" class="image"><img src="images/gnr2bar.png" alt="" /></a>
               <div class="inner">
@@ -182,7 +197,7 @@
         </div>
     </div>
     
-    <div id="personalContent" class="results">
+    <div id="personalContent" class="results" style="display:none;">
         <!-- personal content goes here -->
         <p> Below are some personal projects that I have worked on, that reflect technical skills and my personal interests.</p>
           <div class="features">
